@@ -9,6 +9,7 @@ class Author(Resource):
         if id is None:
             authors = AuthorModel.query.all()
             #authors = authors_schema.dump(authors)
+            # return authors, 200
             if not authors:
                 return "There is no author yet", 200
         else:

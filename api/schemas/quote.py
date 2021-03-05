@@ -5,7 +5,7 @@ from api.schemas.author import AuthorSchema
 
 class QuoteSchema(ma.SQLAlchemySchema):
     class Meta:
-       model = QuoteModel
+        model = QuoteModel
 
     id = ma.auto_field()
     quote = ma.auto_field()

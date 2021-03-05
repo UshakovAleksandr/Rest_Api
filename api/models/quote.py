@@ -7,7 +7,15 @@ class QuoteModel(db.Model):
     author_id = db.Column(db.Integer, db.ForeignKey(AuthorModel.id))
     quote = db.Column(db.String(255), unique=False)
 
-    def __init__(self, author: AuthorModel, quote):
+# пример способа связи из доки зефирок
+# class QuoteModel(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     author_id = db.Column(db.Integer, db.ForeignKey(AuthorModel.id))
+#     quote = db.Column(db.String(255), unique=False)
+#     author = db.relationship('AuthorModel', backref='quote', lazy='joined')
+#     cascade = "all, delete-orphan" - в этом случае не работает
+
+    def __init__(self, author: AuthorModel, quote: str):
         self.author_id = author.id
         self.quote = quote
 

@@ -4,7 +4,7 @@ from api.models.author import AuthorModel
 
 class AuthorSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
-       model = AuthorModel
+        model = AuthorModel
 
 
 author_schema = AuthorSchema()

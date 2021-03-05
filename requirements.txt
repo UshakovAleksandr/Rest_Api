@@ -5,3 +5,5 @@ Flask-SQLAlchemy==2.4.4
 ipython
 gunicorn
 psycopg2-binary
+marshmallow==3.10.0
+marshmallow-sqlalchemy==0.24.2

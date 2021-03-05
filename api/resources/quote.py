@@ -1,15 +1,13 @@
 from api import Resource, reqparse, db
 from api.models.author import AuthorModel
 from api.models.quote import QuoteModel
-# from api.schemas.quote import quote_schema, quotes_schema
-
+#from api.schemas.quote import quote_schema, quotes_schema
 
 class Quotes(Resource):
 
     def get(self, author_id=None, quote_id=None):
         if author_id is None and quote_id is None:
             quotes = QuoteModel.query.all()
-            # return quotes_schema.dump(quotes)
             if not quotes:
                 return "There are no quotes yet", 200
 
